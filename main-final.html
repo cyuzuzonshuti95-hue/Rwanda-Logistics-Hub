@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rwanda Logistics Hub - Urubuga rwo Gutwara Imizigo n'Ibiciro</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#00A859', // Emerald Green
+              dark: '#008546',
+              light: '#E6F6EE',
+              yellow: '#FAD02C',
+              blue: '#00A3E0',
+              slate: '#0F172A',
+              bg: '#F8FAFC'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .hero-bg {
+      background-image: linear-gradient(rgba(15, 23, 42, 0.78), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .kivu-bg {
+      background-image: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.88)), 
+                        url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    /* User theme switch - keeps the existing design and adds optional dark mode */
+    body.dark-mode {
+      background-color: #0f172a !important;
+      color: #e2e8f0 !important;
+      color-scheme: dark;
+    }
+    body.dark-mode .bg-white { background-color: #1e293b !important; }
+    body.dark-mode .bg-slate-50 { background-color: #0f172a !important; }
+    body.dark-mode .bg-slate-100 { background-color: #1e293b !important; }
+    body.dark-mode .bg-slate-200 { background-color: #334155 !important; }
+    body.dark-mode .bg-brand-light { background-color: #123a2b !important; }
+    body.dark-mode .text-slate-900 { color: #f8fafc !important; }
+    body.dark-mode .text-slate-800 { color: #f1f5f9 !important; }
+    body.dark-mode .text-slate-700 { color: #e2e8f0 !important; }
+    body.dark-mode .text-slate-600 { color: #cbd5e1 !important; }
+    body.dark-mode .text-slate-500 { color: #94a3b8 !important; }
+    body.dark-mode .text-slate-400 { color: #94a3b8 !important; }
+    body.dark-mode .text-slate-300 { color: #cbd5e1 !important; }
+    body.dark-mode .border-slate-100 { border-color: #334155 !important; }
+    body.dark-mode .border-slate-200 { border-color: #334155 !important; }
+    body.dark-mode .border-slate-300 { border-color: #475569 !important; }
+    body.dark-mode input,
+    body.dark-mode select,
+    body.dark-mode textarea {
+      background-color: #1e293b !important;
+      color: #f8fafc !important;
+      border-color: #475569 !important;
+    }
+    body.dark-mode input::placeholder,
+    body.dark-mode textarea::placeholder { color: #94a3b8 !important; }
+    body.dark-mode .shadow-sm,
+    body.dark-mode .shadow-md { box-shadow: 0 4px 18px rgba(0,0,0,.25) !important; }
+    body.dark-mode #theme-toggle,
+    body.dark-mode #theme-toggle-mobile {
+      background-color: #334155 !important;
+      color: #facc15 !important;
+    }
+  </style>
+</head>
+<body class="bg-brand-bg text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-brand-blue via-brand-yellow to-brand text-slate-900 text-xs font-bold py-1.5 px-4 text-center">
+    <span><i class="fa-solid fa-flag text-slate-900 mr-1"></i> Urubuga rwa Mbere rw'Ubwikorezi mu Rwanda na EAC | Seamless Freight & RRA Customs Clearance</span>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center space-x-3 group">
+          <div class="bg-white p-1 rounded-xl shadow-md group-hover:scale-105 transition-transform duration-200">
+            <img src="rwanda-logistics-hub-icon.png" alt="Rwanda Logistics Hub" class="w-12 h-12 object-contain rounded-lg">
+          </div>
+          <div>
+            <span class="text-xl font-extrabold text-brand-slate tracking-tight">Rwanda Logistics<span class="text-brand">Hub</span></span>
+            <span class="block text-[11px] font-bold text-brand uppercase tracking-wider">Ubwikorezi mu Rwanda</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#ibiciro" class="text-slate-600 hover:text-brand font-semibold transition duration-150 flex items-center space-x-1.5">
+            <i class="fa-solid fa-calculator text-sm text-brand-blue"></i>
+            <span>Kugereranya Ibiciro</span>
+          </a>
+          <a href="#isoko" class="text-slate-600 hover:text-brand font-semibold transition duration-150 flex items-center space-x-1.5">
+            <i class="fa-solid fa-store text-sm text-brand"></i>
+            <span>Isoko ry'Imizigo & Imodoka</span>
+          </a>
+          <a href="#dogana" class="text-slate-600 hover:text-brand font-semibold transition duration-150 flex items-center space-x-1.5">
+            <i class="fa-solid fa-file-contract text-sm text-brand-yellow"></i>
+            <span>Inyandiko za Dogana</span>
+          </a>
+          <a href="#kurikirana" class="text-slate-600 hover:text-brand font-semibold transition duration-150 flex items-center space-x-1.5">
+            <i class="fa-solid fa-location-dot text-sm text-brand"></i>
+            <span>Gukurikirana</span>
+          </a>
+        </nav>
+
+        <!-- Dynamic User Action CTA -->
+        <div class="hidden md:flex items-center space-x-3">
+          <button onclick="openRegisterModal()" class="bg-brand-slate hover:bg-slate-800 text-white px-4 py-2.5 rounded-xl font-bold text-xs flex items-center space-x-2 shadow-md transition">
+            <i class="fa-solid fa-user-plus text-brand-yellow"></i>
+            <span>Kwiyandikisha (Account)</span>
+          </button>
+          <a href="#ibiciro" class="bg-brand hover:bg-brand-dark text-white px-4 py-2.5 rounded-xl font-bold text-xs shadow-md transition">
+            Shaka Igiciro
+          </a>
+          <button id="theme-toggle" onclick="toggleTheme()" type="button" aria-label="Hindura Dark Mode / Bright Mode" class="w-11 h-11 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center shadow-sm transition">
+            <i id="theme-toggle-icon" class="fa-solid fa-moon"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center space-x-2">
+          <button onclick="openRegisterModal()" class="bg-brand-slate text-white p-2 rounded-lg text-xs">
+            <i class="fa-solid fa-user-plus text-brand-yellow"></i>
+          </button>
+          <button id="theme-toggle-mobile" onclick="toggleTheme()" type="button" aria-label="Hindura Dark Mode / Bright Mode" class="bg-slate-100 hover:bg-slate-200 text-slate-700 p-2 rounded-lg transition">
+            <i id="theme-toggle-icon-mobile" class="fa-solid fa-moon"></i>
+          </button>
+          <button id="mobile-menu-btn" class="text-slate-700 hover:text-brand focus:outline-none p-2">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-6 space-y-3">
+      <a href="#ibiciro" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-brand-light hover:text-brand">Kugereranya Ibiciro</a>
+      <a href="#isoko" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-brand-light hover:text-brand">Isoko ry'Imizigo & Imodoka</a>
+      <a href="#dogana" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-brand-light hover:text-brand">Inyandiko za Dogana</a>
+      <a href="#kurikirana" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-brand-light hover:text-brand">Gukurikirana Imizigo</a>
+    </div>
+  </header>
+
+  <!-- Notification Toast Container -->
+  <div id="toast-container" class="fixed top-24 right-5 z-50 space-y-2 pointer-events-none"></div>
+
+  <!-- Driver/Carrier Details Contact Modal -->
+  <div id="contact-modal" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative border border-slate-200">
+      <button onclick="closeContactModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-100">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="text-center mb-4">
+        <span class="text-brand font-bold text-[11px] uppercase tracking-widest bg-brand-light px-3 py-1 rounded-full">Amakuru y'Umutware</span>
+        <h3 class="text-xl font-extrabold text-slate-900 mt-2" id="modal-driver-name">Izina ry'Umutware</h3>
+      </div>
+
+      <div class="mb-4 rounded-2xl overflow-hidden border border-slate-200 max-h-48 bg-slate-100 flex items-center justify-center">
+        <img id="modal-truck-img" src="" alt="Ifoto y'Imodoka" class="w-full h-48 object-cover">
+      </div>
+
+      <div class="space-y-2.5 text-xs text-slate-700 bg-slate-50 p-4 rounded-2xl border border-slate-200 mb-5">
+        <div class="flex justify-between border-b border-slate-200 pb-2">
+          <span class="text-slate-500"><i class="fa-solid fa-truck text-brand mr-1.5"></i>Ubwoko bw'Imodoka:</span>
+          <span class="font-bold text-slate-900" id="modal-truck-type">-</span>
+        </div>
+        <div class="flex justify-between border-b border-slate-200 pb-2">
+          <span class="text-slate-500"><i class="fa-solid fa-id-card text-brand mr-1.5"></i>Plaque y'Imodoka:</span>
+          <span class="font-mono font-bold bg-white px-2 py-0.5 rounded border border-slate-300 text-slate-900" id="modal-truck-plate">-</span>
+        </div>
+        <div class="flex justify-between border-b border-slate-200 pb-2">
+          <span class="text-slate-500"><i class="fa-solid fa-location-dot text-brand mr-1.5"></i>Aho Imodoka Iri:</span>
+          <span class="font-bold text-brand-blue" id="modal-truck-location">-</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-slate-500"><i class="fa-solid fa-phone text-brand mr-1.5"></i>Nimero ya Telefoni:</span>
+          <span class="font-bold text-slate-900" id="modal-truck-phone">-</span>
+        </div>
+      </div>
+
+      <a id="modal-call-btn" href="#" class="w-full bg-brand hover:bg-brand-dark text-white font-extrabold py-3.5 rounded-xl shadow-md transition flex items-center justify-center space-x-2 text-sm">
+        <i class="fa-solid fa-phone-volume"></i>
+        <span>Hamagara Ubu (Call Now)</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Cargo/Shipper Details Contact Modal -->
+  <div id="cargo-contact-modal" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative border border-slate-200">
+      <button onclick="closeCargoContactModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-100">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="text-center mb-4">
+        <span class="text-brand-yellow font-bold text-[11px] uppercase tracking-widest bg-amber-100 text-amber-900 px-3 py-1 rounded-full">Amakuru y'Ufite Umzigo</span>
+        <h3 class="text-xl font-extrabold text-slate-900 mt-2" id="modal-cargo-title">Ubwoko bw'Umzigo</h3>
+        <p class="text-xs text-slate-500 mt-0.5" id="modal-shipper-name">Izina ry'Umucuruzi</p>
+      </div>
+
+      <div class="mb-4 rounded-2xl overflow-hidden border border-slate-200 max-h-48 bg-slate-100 flex items-center justify-center">
+        <img id="modal-cargo-img" src="" alt="Ifoto y'Ibicuruzwa" class="w-full h-48 object-cover">
+      </div>
+
+      <div class="space-y-2.5 text-xs text-slate-700 bg-slate-50 p-4 rounded-2xl border border-slate-200 mb-5">
+        <div class="flex justify-between border-b border-slate-200 pb-2">
+          <span class="text-slate-500"><i class="fa-solid fa-hashtag text-brand mr-1.5"></i>TIN y'Ubucuruzi:</span>
+          <span class="font-mono font-bold text-slate-900" id="modal-cargo-tin">-</span>
+        </div>
+        <div class="flex justify-between border-b border-slate-200 pb-2">
+          <span class="text-slate-500"><i class="fa-solid fa-weight-hanging text-brand mr-1.5"></i>Uburemere:</span>
+          <span class="font-bold text-slate-900" id="modal-cargo-weight">-</span>
+        </div>
+        <div class="flex justify-between border-b border-slate-200 pb-2">
+          <span class="text-slate-500"><i class="fa-solid fa-route text-brand mr-1.5"></i>Inzira (From ➔ To):</span>
+          <span class="font-bold text-brand-blue" id="modal-cargo-route">-</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-slate-500"><i class="fa-solid fa-phone text-brand mr-1.5"></i>Telefoni y'Umucuruzi:</span>
+          <span class="font-bold text-slate-900" id="modal-cargo-phone">-</span>
+        </div>
+      </div>
+
+      <a id="modal-cargo-call-btn" href="#" class="w-full bg-brand-slate hover:bg-slate-800 text-white font-extrabold py-3.5 rounded-xl shadow-md transition flex items-center justify-center space-x-2 text-sm">
+        <i class="fa-solid fa-phone-volume"></i>
+        <span>Vugana n'Ufite Umzigo (Call Shipper)</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Registration Modal (Umutware vs Ufite Ibicuruzwa) -->
+  <div id="register-modal" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative border border-slate-200 max-h-[90vh] overflow-y-auto">
+      <button onclick="closeRegisterModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-100">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <span class="text-brand font-bold text-xs uppercase tracking-widest bg-brand-light px-3 py-1 rounded-full">Kwisungana & Gukora</span>
+        <h3 class="text-2xl font-extrabold text-slate-900 mt-2">Iyandikishe ku Urubuga</h3>
+        <p class="text-xs text-slate-500 mt-1">Hitamo niba uzoza uri Umutware w'Imizigo cyangwa Umucuruzi ufite ibicuruzwa.</p>
+      </div>
+
+      <!-- Role Selector Buttons -->
+      <div class="grid grid-cols-2 gap-3 mb-6 bg-slate-100 p-1.5 rounded-2xl">
+        <button type="button" id="role-carrier-btn" onclick="switchRegisterRole('carrier')" class="py-3 px-4 rounded-xl font-extrabold text-xs transition shadow-sm bg-brand text-white flex items-center justify-center space-x-2">
+          <i class="fa-solid fa-truck"></i>
+          <span>Ndi Umutware (Carrier)</span>
+        </button>
+        <button type="button" id="role-shipper-btn" onclick="switchRegisterRole('shipper')" class="py-3 px-4 rounded-xl font-extrabold text-xs transition text-slate-600 hover:text-slate-900 flex items-center justify-center space-x-2">
+          <i class="fa-solid fa-boxes-stacked"></i>
+          <span>Mfite Ibicuruzwa (Shipper)</span>
+        </button>
+      </div>
+
+      <!-- Carrier Form -->
+      <form id="carrier-reg-form" onsubmit="handleCarrierRegister(event)" class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Izina Ryose</label>
+            <input type="text" id="c-name" required placeholder="e.g. Jean-Claude Habimana" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Telefone (Mobile Money)</label>
+            <input type="tel" id="c-phone" required placeholder="e.g. 0788123456" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Ubwoko bw'Ikinyabiziga</label>
+            <select id="c-vtype" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+              <option value="Fuso Canter Truck">Fuso Canter (3-5 Tons)</option>
+              <option value="Daihatsu Pick-up">Daihatsu Pick-up (1-2 Tons)</option>
+              <option value="Ikamyo Nini (Trailer)">Ikamyo Nini / Semi-Trailer (20-30 Tons)</option>
+              <option value="Actros Flatbed">Actros Flatbed Truck</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Plaque y'Imodoka</label>
+            <input type="text" id="c-plate" required placeholder="e.g. RAD 450 B" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium uppercase focus:ring-2 focus:ring-brand outline-none">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Uburemere Icapa (Tons)</label>
+            <input type="number" id="c-capacity" required placeholder="e.g. 5" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Aho Imodoka Iherereye</label>
+            <select id="c-location" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+              <option value="Kigali (Magerwa)">Kigali (Magerwa)</option>
+              <option value="Rubavu (Border)">Rubavu (Border)</option>
+              <option value="Musanze">Musanze</option>
+              <option value="Rusizi">Rusizi</option>
+              <option value="Huye">Huye</option>
+              <option value="Kayonza">Kayonza</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Link y'Ifoto y'Imodoka (Optionnel)</label>
+          <input type="url" id="c-photo" placeholder="https://example.com/foto.jpg (cyangwa usige ari ubusa)" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+        </div>
+
+        <button type="submit" class="w-full bg-brand hover:bg-brand-dark text-white font-extrabold py-3.5 rounded-xl shadow-md transition flex items-center justify-center space-x-2 text-sm">
+          <i class="fa-solid fa-truck-ramp-box"></i>
+          <span>Andikisha Imodoka yawe ku Isoko</span>
+        </button>
+      </form>
+
+      <!-- Shipper Form -->
+      <form id="shipper-reg-form" onsubmit="handleShipperRegister(event)" class="space-y-4 hidden">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Izina Ryose / Ikigo</label>
+            <input type="text" id="s-name" required placeholder="e.g. Rwanda Agro Supplies Ltd" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Telefone yawe</label>
+            <input type="tel" id="s-phone" required placeholder="e.g. 0788990011" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">TIN Number (RRA)</label>
+            <input type="text" id="s-tin" placeholder="e.g. 109823441" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Uburemere mu Kg</label>
+            <input type="number" id="s-weight" required placeholder="e.g. 2500" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Ubwoko bw'Ibicuruzwa</label>
+          <input type="text" id="s-cargo" required placeholder="e.g. Sake w'Ibishyimbo & Ikawa, Ibikoresho by'Ubwubatsi..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Aho Biva</label>
+            <select id="s-from" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+              <option value="Kigali">Kigali</option>
+              <option value="Musanze">Musanze</option>
+              <option value="Rubavu">Rubavu</option>
+              <option value="Rusizi">Rusizi</option>
+              <option value="Nyagatare">Nyagatare</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Aho Bijya</label>
+            <select id="s-to" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+              <option value="Rubavu Border">Rubavu Border</option>
+              <option value="Rusizi Border">Rusizi Border</option>
+              <option value="Gatuna OSBP">Gatuna OSBP</option>
+              <option value="Kigali Hub">Kigali Hub</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Link y'Ifoto y'Ibicuruzwa (Optionnel)</label>
+          <input type="url" id="s-photo" placeholder="https://example.com/cargo.jpg (cyangwa usige ari ubusa)" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+        </div>
+
+        <button type="submit" class="w-full bg-brand-slate hover:bg-slate-800 text-white font-extrabold py-3.5 rounded-xl shadow-md transition flex items-center justify-center space-x-2 text-sm">
+          <i class="fa-solid fa-box-archive"></i>
+          <span>Manika Umzigo Wawu Ushaka Imodoka</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-bg relative text-white py-20 lg:py-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full text-brand-yellow text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-mountain text-sm"></i>
+            <span>Ubworoherane mu Bwikorezi bw'Imizigo</span>
+          </div>
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+            Urubuga Ruhuza Abafite Ibicuruzwa n'Abatwara Imizigo mu Rwanda
+          </h1>
+          <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
+            Imbuga zo kuri interineti zihuza abafite ibicuruzwa n'abatwara imizigo gushaka ibiciro birimo guciririkanya, zifasha ibigo by'ubucuruzi kugereranya ku mugaragaro ibiciro byo gutwara ibintu, koroshya impapuro n'inyandiko z'insoro/dowane na logistics, ndetse no kugabanya igihombo n'akazi kenshi mu buyobozi.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <button onclick="openRegisterModal('carrier')" class="bg-brand hover:bg-brand-dark text-white font-bold px-7 py-4 rounded-xl shadow-xl hover:shadow-brand/30 transition duration-200 flex items-center space-x-2 text-base">
+              <i class="fa-solid fa-truck"></i>
+              <span>Ndi Umutware (Iyandikishe)</span>
+            </button>
+            <button onclick="openRegisterModal('shipper')" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-7 py-4 rounded-xl backdrop-blur-md transition duration-200 flex items-center space-x-2 text-base">
+              <i class="fa-solid fa-boxes-stacked"></i>
+              <span>Mfite Ibicuruzwa (Post Cargo)</span>
+            </button>
+          </div>
+
+          <!-- Quick Rwandan Logistics Stats -->
+          <div class="grid grid-cols-3 gap-4 pt-8 border-t border-white/20">
+            <div>
+              <span class="block text-2xl lg:text-3xl font-extrabold text-brand-yellow" id="stat-trucks">542</span>
+              <span class="text-xs text-slate-300 font-medium">Imodoka z'Imizigo Verified</span>
+            </div>
+            <div>
+              <span class="block text-2xl lg:text-3xl font-extrabold text-brand-blue" id="stat-cargos">189</span>
+              <span class="text-xs text-slate-300 font-medium">Imizigo Ishaka Transport</span>
+            </div>
+            <div>
+              <span class="block text-2xl lg:text-3xl font-extrabold text-brand">100%</span>
+              <span class="text-xs text-slate-300 font-medium">Gukorera mu Mucyo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Tracking Card -->
+        <div class="lg:col-span-5">
+          <div class="glass-card p-6 sm:p-8 rounded-3xl shadow-2xl relative">
+            <div class="flex justify-between items-center pb-4 border-b border-white/15">
+              <div class="flex items-center space-x-2">
+                <span class="w-3 h-3 bg-brand rounded-full animate-ping"></span>
+                <span class="text-sm font-bold text-white">Live Tracking (Kigali - Rubavu)</span>
+              </div>
+              <span class="text-[11px] text-brand-yellow font-mono bg-slate-900/60 px-2.5 py-1 rounded-md">RWA-9921-TRK</span>
+            </div>
+
+            <div class="py-6 space-y-4">
+              <div class="flex justify-between items-center text-sm font-semibold">
+                <div class="flex items-center space-x-2">
+                  <i class="fa-solid fa-location-dot text-brand-blue"></i>
+                  <span>Kigali (DP World)</span>
+                </div>
+                <i class="fa-solid fa-arrow-right text-brand-yellow"></i>
+                <div class="flex items-center space-x-2">
+                  <i class="fa-solid fa-flag-checkered text-brand"></i>
+                  <span>Rubavu Border</span>
+                </div>
+              </div>
+
+              <div class="w-full bg-slate-800/80 h-3 rounded-full overflow-hidden p-0.5 border border-white/10">
+                <div class="bg-gradient-to-r from-brand-blue via-brand-yellow to-brand h-full rounded-full w-3/4 transition-all duration-500"></div>
+              </div>
+
+              <div class="bg-slate-900/70 p-4 rounded-2xl border border-white/10 space-y-2.5 text-xs">
+                <div class="flex justify-between text-slate-300">
+                  <span>Shoferi:</span>
+                  <span class="text-white font-semibold">Jean-Paul Nsengiyumva</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span>Uburemere:</span>
+                  <span class="text-white font-semibold">2,500 Kg (Fuso)</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span>Inyandiko za RRA:</span>
+                  <span class="text-emerald-400 font-bold"><i class="fa-solid fa-circle-check"></i> Cleared (RRA-OK)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2 flex justify-between items-center text-xs text-slate-300 border-t border-white/10">
+              <span>Aho ageze: <strong>Musanze Highway</strong></span>
+              <span class="text-brand-yellow font-bold"><i class="fa-solid fa-truck-moving mr-1"></i> Mu Muhanda</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Freight Marketplace -->
+  <section id="isoko" class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+        <div>
+          <span class="text-brand font-bold text-xs uppercase tracking-widest bg-brand-light px-3 py-1 rounded-full">Live Freight Marketplace</span>
+          <h2 class="text-3xl font-extrabold text-brand-slate tracking-tight mt-1">Isoko Ry'Imodoka n'Imizigo mu Rwanda</h2>
+        </div>
+
+        <div class="flex items-center space-x-2 bg-slate-100 p-1 rounded-xl">
+          <button id="tab-trucks-btn" onclick="switchMarketplaceTab('trucks')" class="px-4 py-2 rounded-lg text-xs font-extrabold transition bg-white text-brand shadow-sm">
+            <i class="fa-solid fa-truck mr-1"></i> Imodoka Zitegereje Akazi (<span id="truck-count-badge">3</span>)
+          </button>
+          <button id="tab-cargos-btn" onclick="switchMarketplaceTab('cargos')" class="px-4 py-2 rounded-lg text-xs font-extrabold transition text-slate-600 hover:text-slate-900">
+            <i class="fa-solid fa-boxes-stacked mr-1"></i> Imizigo Ishaka Ubwikorezi (<span id="cargo-count-badge">2</span>)
+          </button>
+          <button id="tab-delivery-btn" onclick="switchMarketplaceTab('delivery')" class="px-4 py-2 rounded-lg text-xs font-extrabold transition text-slate-600 hover:text-slate-900">
+            <i class="fa-solid fa-location-arrow mr-1"></i> Nshaka Gutwarirwa Umuzigo (<span id="delivery-count-badge">1</span>)
+          </button>
+        </div>
+      </div>
+
+      <!-- Marketplace Container: Available Trucks Grid -->
+      <div id="trucks-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Truck Card 1 -->
+        <div class="bg-brand-bg rounded-2xl overflow-hidden border border-slate-200 hover:border-brand transition shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="h-44 bg-slate-200 relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80" alt="Fuso Canter Truck" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-emerald-500 text-white text-[10px] uppercase font-extrabold px-2.5 py-1 rounded-full shadow">Disponible Ubu</span>
+            </div>
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <h4 class="font-extrabold text-slate-900 text-base">Fuso Canter Truck</h4>
+                  <p class="text-xs text-slate-500"><i class="fa-solid fa-user text-slate-400 mr-1"></i> Celestin M.</p>
+                </div>
+                <span class="font-mono text-xs font-bold bg-white px-2.5 py-1 rounded-lg border border-slate-200">RAC 882 A</span>
+              </div>
+              <div class="space-y-1.5 text-xs text-slate-600 bg-white p-3 rounded-xl border border-slate-150">
+                <div class="flex justify-between">
+                  <span>Uburemere Icapa:</span>
+                  <span class="font-bold text-slate-900">5.0 Tons</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Aho Iherereye:</span>
+                  <span class="font-bold text-brand-blue">Kigali (Magerwa)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="showCarrierDetails('Celestin M.', '0788 123 456', 'Fuso Canter Truck', 'RAC 882 A', 'Kigali (Magerwa)', 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80')" class="w-full bg-brand hover:bg-brand-dark text-white font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center space-x-1.5">
+              <i class="fa-solid fa-phone"></i>
+              <span>Vugana n'Umutware</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Truck Card 2 -->
+        <div class="bg-brand-bg rounded-2xl overflow-hidden border border-slate-200 hover:border-brand transition shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="h-44 bg-slate-200 relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=600&q=80" alt="Actros Trailer" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-emerald-500 text-white text-[10px] uppercase font-extrabold px-2.5 py-1 rounded-full shadow">Disponible Ubu</span>
+            </div>
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <h4 class="font-extrabold text-slate-900 text-base">Actros Trailer (28T)</h4>
+                  <p class="text-xs text-slate-500"><i class="fa-solid fa-user text-slate-400 mr-1"></i> Rwanda Transport Co.</p>
+                </div>
+                <span class="font-mono text-xs font-bold bg-white px-2.5 py-1 rounded-lg border border-slate-200">RAD 102 X</span>
+              </div>
+              <div class="space-y-1.5 text-xs text-slate-600 bg-white p-3 rounded-xl border border-slate-150">
+                <div class="flex justify-between">
+                  <span>Uburemere Icapa:</span>
+                  <span class="font-bold text-slate-900">28.0 Tons</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Aho Iherereye:</span>
+                  <span class="font-bold text-brand-blue">Rubavu Border</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="showCarrierDetails('Rwanda Transport Co.', '0785 990 112', 'Actros Trailer (28T)', 'RAD 102 X', 'Rubavu Border', 'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=600&q=80')" class="w-full bg-brand hover:bg-brand-dark text-white font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center space-x-1.5">
+              <i class="fa-solid fa-phone"></i>
+              <span>Vugana n'Umutware</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Truck Card 3 -->
+        <div class="bg-brand-bg rounded-2xl overflow-hidden border border-slate-200 hover:border-brand transition shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="h-44 bg-slate-200 relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80" alt="Daihatsu Pick-up" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-emerald-500 text-white text-[10px] uppercase font-extrabold px-2.5 py-1 rounded-full shadow">Disponible Ubu</span>
+            </div>
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <h4 class="font-extrabold text-slate-900 text-base">Daihatsu Pick-up</h4>
+                  <p class="text-xs text-slate-500"><i class="fa-solid fa-user text-slate-400 mr-1"></i> Eric Nshimiyimana</p>
+                </div>
+                <span class="font-mono text-xs font-bold bg-white px-2.5 py-1 rounded-lg border border-slate-200">RAE 519 C</span>
+              </div>
+              <div class="space-y-1.5 text-xs text-slate-600 bg-white p-3 rounded-xl border border-slate-150">
+                <div class="flex justify-between">
+                  <span>Uburemere Icapa:</span>
+                  <span class="font-bold text-slate-900">1.8 Tons</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Aho Iherereye:</span>
+                  <span class="font-bold text-brand-blue">Musanze</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="showCarrierDetails('Eric Nshimiyimana', '0731 442 551', 'Daihatsu Pick-up', 'RAE 519 C', 'Musanze', 'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80')" class="w-full bg-brand hover:bg-brand-dark text-white font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center space-x-1.5">
+              <i class="fa-solid fa-phone"></i>
+              <span>Vugana n'Umutware</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Marketplace Container: Available Cargos Grid -->
+      <div id="cargos-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
+        
+        <!-- Cargo Card 1 -->
+        <div class="bg-brand-bg rounded-2xl overflow-hidden border border-slate-200 hover:border-brand-slate transition shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="h-44 bg-slate-200 relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Ibishyimbo n'Ikawa" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] uppercase font-extrabold px-2.5 py-1 rounded-full shadow">Ushaka Transport</span>
+            </div>
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <h4 class="font-extrabold text-slate-900 text-base">Sake w'Ibishyimbo & Ikawa</h4>
+                  <p class="text-xs text-slate-500"><i class="fa-solid fa-building text-slate-400 mr-1"></i> Kivu Agribusiness</p>
+                </div>
+                <span class="text-xs font-bold text-brand bg-white px-2.5 py-1 rounded-lg border border-slate-200">3.5 Tons</span>
+              </div>
+              <div class="space-y-1.5 text-xs text-slate-600 bg-white p-3 rounded-xl border border-slate-150">
+                <div class="flex justify-between">
+                  <span>Inzira:</span>
+                  <span class="font-bold text-slate-900">Musanze ➔ Kigali</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>TIN y'Ubucuruzi:</span>
+                  <span class="font-mono font-bold text-slate-700">108722990</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="showCargoDetails('Sake w\'Ibishyimbo & Ikawa', 'Kivu Agribusiness', '0788 554 112', '108722990', '3.5 Tons', 'Musanze ➔ Kigali', 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80')" class="w-full bg-brand-slate hover:bg-slate-800 text-white font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center space-x-1.5">
+              <i class="fa-solid fa-hand-holding-dollar"></i>
+              <span>Tanga Igiciro cyawe (Bid)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cargo Card 2 -->
+        <div class="bg-brand-bg rounded-2xl overflow-hidden border border-slate-200 hover:border-brand-slate transition shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="h-44 bg-slate-200 relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Ibikoresho by'Ubwubatsi" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] uppercase font-extrabold px-2.5 py-1 rounded-full shadow">Ushaka Transport</span>
+            </div>
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <h4 class="font-extrabold text-slate-900 text-base">Ibikoresho by'Ubwubatsi</h4>
+                  <p class="text-xs text-slate-500"><i class="fa-solid fa-building text-slate-400 mr-1"></i> Nyabugogo Hardware Ltd</p>
+                </div>
+                <span class="text-xs font-bold text-brand bg-white px-2.5 py-1 rounded-lg border border-slate-200">12.0 Tons</span>
+              </div>
+              <div class="space-y-1.5 text-xs text-slate-600 bg-white p-3 rounded-xl border border-slate-150">
+                <div class="flex justify-between">
+                  <span>Inzira:</span>
+                  <span class="font-bold text-slate-900">Kigali ➔ Rubavu</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>TIN y'Ubucuruzi:</span>
+                  <span class="font-mono font-bold text-slate-700">100912441</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="showCargoDetails('Ibikoresho by\'Ubwubatsi', 'Nyabugogo Hardware Ltd', '0783 221 889', '100912441', '12.0 Tons', 'Kigali ➔ Rubavu', 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80')" class="w-full bg-brand-slate hover:bg-slate-800 text-white font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center space-x-1.5">
+              <i class="fa-solid fa-hand-holding-dollar"></i>
+              <span>Tanga Igiciro cyawe (Bid)</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Marketplace Container: Delivery Requests Grid -->
+      <div id="delivery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
+        <div class="md:col-span-2 lg:col-span-3 bg-brand-bg rounded-2xl border border-slate-200 p-6 shadow-sm">
+          <div class="flex items-start gap-3 mb-5">
+            <div class="w-11 h-11 rounded-xl bg-brand-light text-brand flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-truck-fast text-lg"></i>
+            </div>
+            <div>
+              <h3 class="font-extrabold text-slate-900 text-lg">Shaka ko bakuzanire umuzigo?</h3>
+              <p class="text-xs text-slate-500 mt-1">Andika ibyo ushaka gutwarwa, aho biva n'aho bijya. Abatwara imizigo bazabona request yawe bakuvugishe.</p>
+            </div>
+          </div>
+          <form id="delivery-request-form" onsubmit="handleDeliveryRequest(event)" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Amazina</label>
+              <input id="d-name" type="text" required placeholder="Amazina yawe" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Telefone</label>
+              <input id="d-phone" type="tel" required placeholder="07xx xxx xxx" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Ubwoko bw'umuzigo</label>
+              <input id="d-cargo" type="text" required placeholder="Urugero: Ibishyimbo" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Uburemere (kg)</label>
+              <input id="d-weight" type="number" min="1" required placeholder="500" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Aho biva</label>
+              <input id="d-from" type="text" required placeholder="Kigali" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Aho bijya</label>
+              <input id="d-to" type="text" required placeholder="Musanze" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand outline-none">
+            </div>
+            <div class="md:col-span-2 lg:col-span-3">
+              <button type="submit" class="w-full bg-brand hover:bg-brand-dark text-white font-extrabold py-3.5 rounded-xl shadow-md transition flex items-center justify-center gap-2">
+                <i class="fa-solid fa-paper-plane"></i><span>Shyiraho Request yo Gutwarirwa Umuzigo</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Freight Calculator Section -->
+  <section id="ibiciro" class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="text-brand font-bold text-xs uppercase tracking-widest bg-brand-light px-3 py-1 rounded-full">Kugereranya Tariffs</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-slate tracking-tight mt-2">Shaka Igiciro cya Birasanzwe & Guhuza Imizigo</h2>
+      <p class="mt-3 text-slate-600 text-base">Uzuza amakuru y'imizigo yawe hano n'ubwoko bw'ikinyabiziga ukeneye kugira ngo ubone ibiciro mu mucyo.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Freight Search Form -->
+      <div class="lg:col-span-5 bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200">
+        <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center space-x-2.5">
+          <div class="w-8 h-8 bg-brand text-white rounded-lg flex items-center justify-center text-sm">
+            <i class="fa-solid fa-sliders"></i>
+          </div>
+          <span>Ibipimo by'Umzigo Wawu</span>
+        </h3>
+
+        <form id="quote-form" class="space-y-4">
+          <div>
+            <label for="origin" class="block text-xs font-bold text-slate-700 uppercase mb-1">Ahantu Biva (Origin)</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-brand-blue">
+                <i class="fa-solid fa-circle-dot"></i>
+              </span>
+              <select id="origin" required class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none text-slate-800 text-sm font-medium">
+                <option value="">Select Origin...</option>
+                <option value="Kigali" selected>Kigali (Magerwa / DP World)</option>
+                <option value="Rubavu">Rubavu (Gisenyi Border)</option>
+                <option value="Rusizi">Rusizi (Cyangugu)</option>
+                <option value="Musanze">Musanze (Ruhengeri)</option>
+                <option value="Huye">Huye (Butare)</option>
+                <option value="Kagitumba">Kagitumba OSBP</option>
+                <option value="Rusumo">Rusumo Border</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="destination" class="block text-xs font-bold text-slate-700 uppercase mb-1">Ahantu Bijya (Destination)</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-red-500">
+                <i class="fa-solid fa-location-dot"></i>
+              </span>
+              <select id="destination" required class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none text-slate-800 text-sm font-medium">
+                <option value="">Select Destination...</option>
+                <option value="Rubavu" selected>Rubavu (La Petite Barrière)</option>
+                <option value="Kigali">Kigali City Hub</option>
+                <option value="Rusizi">Rusizi Border Post</option>
+                <option value="Musanze">Musanze Logistics Station</option>
+                <option value="Gatuna">Gatuna Border</option>
+                <option value="Bugesera">Bugesera Cargo Hub</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="weight" class="block text-xs font-bold text-slate-700 uppercase mb-1">Uburemere mu Kg</label>
+            <input type="number" id="weight" min="10" max="40000" value="1200" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none text-slate-800 text-sm font-medium">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Ubwoko bw'Ikinyabiziga (Vehicle Type)</label>
+            <div class="grid grid-cols-3 gap-2.5">
+              <label class="border border-slate-200 rounded-xl p-3 text-center cursor-pointer hover:border-brand flex flex-col items-center justify-center space-y-1.5 has-[:checked]:border-brand has-[:checked]:bg-brand-light transition">
+                <input type="radio" name="vehicle" value="pickup" class="sr-only" checked>
+                <i class="fa-solid fa-truck-pickup text-brand text-lg"></i>
+                <span class="text-xs font-bold">Pick-up</span>
+              </label>
+              <label class="border border-slate-200 rounded-xl p-3 text-center cursor-pointer hover:border-brand flex flex-col items-center justify-center space-y-1.5 has-[:checked]:border-brand has-[:checked]:bg-brand-light transition">
+                <input type="radio" name="vehicle" value="fuso" class="sr-only">
+                <i class="fa-solid fa-truck text-brand text-lg"></i>
+                <span class="text-xs font-bold">Fuso Canter</span>
+              </label>
+              <label class="border border-slate-200 rounded-xl p-3 text-center cursor-pointer hover:border-brand flex flex-col items-center justify-center space-y-1.5 has-[:checked]:border-brand has-[:checked]:bg-brand-light transition">
+                <input type="radio" name="vehicle" value="ikamyo" class="sr-only">
+                <i class="fa-solid fa-truck-trailer text-brand text-lg"></i>
+                <span class="text-xs font-bold">Ikamyo (Trailer)</span>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="w-full bg-brand hover:bg-brand-dark text-white font-extrabold py-4 px-4 rounded-xl shadow-md transition duration-200 flex items-center justify-center space-x-2 text-base">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Bara & Kugereranya Ibiciro</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Carrier Comparison Output Cards -->
+      <div class="lg:col-span-7 space-y-4">
+        <div class="flex justify-between items-center mb-2">
+          <h3 class="text-xl font-bold text-slate-900">Ibiciro by'Abatwara Imizigo (Carrier Tariffs)</h3>
+          <span class="text-xs bg-slate-200 text-slate-700 px-3 py-1 rounded-full font-bold">3 Carrier Offers</span>
+        </div>
+
+        <div id="results-loader" class="hidden bg-white rounded-3xl border border-slate-200 p-12 text-center space-y-4">
+          <div class="w-12 h-12 bg-brand-light text-brand rounded-full flex items-center justify-center mx-auto text-xl animate-spin">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <p class="text-slate-600 font-medium">Turimo kugereranya ibiciro mu makampani y'ubwikorezi mu Rwanda...</p>
+        </div>
+
+        <div id="results-container" class="space-y-4">
+          <!-- Carrier Offer 1 -->
+          <div class="bg-white border-2 border-brand/40 hover:border-brand rounded-3xl p-6 shadow-sm transition relative overflow-hidden">
+            <span class="absolute top-0 right-0 bg-brand text-white text-[10px] uppercase font-black px-3.5 py-1 rounded-bl-xl tracking-wider">Igiciro Gito Cyane</span>
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
+              <div>
+                <div class="flex items-center space-x-2">
+                  <span class="font-extrabold text-lg text-slate-900">Express Trans Rwanda</span>
+                  <span class="text-[11px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-md font-bold"><i class="fa-solid fa-circle-check"></i> RRA Registered</span>
+                </div>
+                <div class="flex items-center space-x-4 text-xs text-slate-500 mt-1">
+                  <span><i class="fa-solid fa-star text-amber-400"></i> 4.9 (140+ reviews)</span>
+                  <span><i class="fa-solid fa-clock text-slate-400"></i> Masaha 3 - 5</span>
+                </div>
+              </div>
+              <div class="text-left sm:text-right">
+                <span class="block text-2xl font-black text-brand" id="price-1">165,000 RWF</span>
+                <span class="text-[11px] text-slate-400">Harimo TVA & Bima y'Imizigo</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+              <div class="flex items-center space-x-4 text-xs text-slate-600">
+                <span><i class="fa-solid fa-satellite text-brand"></i> Real-time GPS</span>
+                <span><i class="fa-solid fa-shield-halved text-brand-blue"></i> Full Cargo Cover</span>
+              </div>
+              <button onclick="selectCarrier('Express Trans Rwanda', '165,000 RWF')" class="bg-brand-slate hover:bg-brand text-white text-xs font-bold px-4 py-2.5 rounded-xl transition">
+                Hitamo Iyi Kampani
+              </button>
+            </div>
+          </div>
+
+          <!-- Carrier Offer 2 -->
+          <div class="bg-white border border-slate-200 hover:border-brand rounded-3xl p-6 shadow-sm transition">
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
+              <div>
+                <div class="flex items-center space-x-2">
+                  <span class="font-extrabold text-lg text-slate-900">Kivu Logistics Co.</span>
+                  <span class="text-[11px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-md font-bold"><i class="fa-solid fa-circle-check"></i> RRA Registered</span>
+                </div>
+                <div class="flex items-center space-x-4 text-xs text-slate-500 mt-1">
+                  <span><i class="fa-solid fa-star text-amber-400"></i> 4.8 (95 reviews)</span>
+                  <span><i class="fa-solid fa-clock text-slate-400"></i> Masaha 4 - 6</span>
+                </div>
+              </div>
+              <div class="text-left sm:text-right">
+                <span class="block text-2xl font-black text-slate-900" id="price-2">185,000 RWF</span>
+                <span class="text-[11px] text-slate-400">Harimo TVA</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+              <div class="flex items-center space-x-4 text-xs text-slate-600">
+                <span><i class="fa-solid fa-file-pdf text-brand"></i> Auto Inyandiko</span>
+              </div>
+              <button onclick="selectCarrier('Kivu Logistics Co.', '185,000 RWF')" class="bg-brand-slate hover:bg-brand text-white text-xs font-bold px-4 py-2.5 rounded-xl transition">
+                Hitamo Iyi Kampani
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Customs Paperwork Streamlining Section -->
+  <section id="dogana" class="kivu-bg py-20 text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center space-x-2 bg-brand/20 border border-brand/40 px-3.5 py-1.5 rounded-full text-brand-yellow text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Rwanda Revenue Authority (RRA) Integration</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">
+            Kwihutisha Inyandiko z'Iduwane na Dogana
+          </h2>
+          <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+            Urubuga rwacu ruragufasha kuzuza no gukora mu buryo bwihuse inyandiko zose z'insoro (Declarasiyo) zikenerwa ku mipaka n'ibigo bya Dogana mu Rwanda. Irinde gukererwa no kugabanya akazi kenshi mu buyobozi.
+          </p>
+        </div>
+
+        <!-- Interactive Customs Clearance Generator -->
+        <div class="lg:col-span-7 bg-slate-900/85 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-white/15 shadow-2xl">
+          <h3 class="text-lg font-bold text-white mb-4 pb-3 border-b border-white/10 flex justify-between items-center">
+            <span>Declarasiyo ya Dogana (RRA Customs Form)</span>
+            <span class="text-xs text-brand-yellow font-mono">E-CUSTOMS v2.4</span>
+          </h3>
+
+          <form id="customs-form" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="tin" class="block text-xs font-bold text-slate-300 uppercase mb-1">TIN Number y'Ubucuruzi</label>
+                <input type="text" id="tin" placeholder="e.g. 100982341" required class="w-full px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand text-sm">
+              </div>
+              <div>
+                <label for="company" class="block text-xs font-bold text-slate-300 uppercase mb-1">Izina ry'Ikigo / Umucuruzi</label>
+                <input type="text" id="company" placeholder="e.g. Great Lakes Trading Ltd" required class="w-full px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand text-sm">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="commodity" class="block text-xs font-bold text-slate-300 uppercase mb-1">Ubwoko bw'Ibicuruzwa</label>
+                <select id="commodity" class="w-full px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-brand text-sm">
+                  <option value="Ibicuruzwa by'Ubuhinzi (Agriculture)">Ibicuruzwa by'Ubuhinzi (Agriculture)</option>
+                  <option value="Ibikoresho by'Ubwubatsi (Construction)">Ibikoresho by'Ubwubatsi (Construction)</option>
+                  <option value="Ibyuma n'Ikoranabuhanga (Electronics)">Ibyuma n'Ikoranabuhanga (Electronics)</option>
+                </select>
+              </div>
+              <div>
+                <label for="cargo-val" class="block text-xs font-bold text-slate-300 uppercase mb-1">Agaciro k'Ibicuruzwa (RWF)</label>
+                <input type="number" id="cargo-val" placeholder="e.g. 8,500,000" required class="w-full px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand text-sm">
+              </div>
+            </div>
+
+            <div>
+              <label for="border" class="block text-xs font-bold text-slate-300 uppercase mb-1">Umupaka Dogana Izaberaho</label>
+              <select id="border" class="w-full px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-brand text-sm">
+                <option value="Rubavu - La Petite Barrière">Rubavu - La Petite Barrière</option>
+                <option value="Gatuna One Stop Border Post">Gatuna One Stop Border Post</option>
+                <option value="Rusizi I Border">Rusizi I Border Post</option>
+                <option value="Kigali Cargo Terminal (Magerwa)">Kigali Cargo Terminal (Magerwa)</option>
+              </select>
+            </div>
+
+            <button type="submit" class="w-full bg-brand hover:bg-brand-dark text-white font-bold py-3.5 rounded-xl transition flex items-center justify-center space-x-2 text-sm">
+              <i class="fa-solid fa-file-pdf"></i>
+              <span>Kora Declarasiyo mu Bwihuse</span>
+            </button>
+          </form>
+
+          <!-- Customs Summary Output Card -->
+          <div id="customs-output" class="hidden mt-6 bg-slate-800 p-5 rounded-2xl border border-brand/40 space-y-3">
+            <div class="flex justify-between items-center border-b border-slate-700 pb-2">
+              <span class="text-xs font-bold text-brand-yellow uppercase tracking-wider"><i class="fa-solid fa-circle-check text-brand mr-1"></i> Incamake y'Inyandiko yaremejwe</span>
+              <span class="text-[10px] bg-emerald-900/60 text-emerald-300 px-2 py-0.5 rounded font-mono">STATUS: READY FOR RRA</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2 text-xs text-slate-300">
+              <div><strong>TIN:</strong> <span id="out-tin" class="text-white"></span></div>
+              <div><strong>Ikigo:</strong> <span id="out-company" class="text-white"></span></div>
+              <div><strong>Ibicuruzwa:</strong> <span id="out-commodity" class="text-white"></span></div>
+              <div><strong>Agaciro:</strong> <span id="out-val" class="text-brand-yellow font-bold"></span> RWF</div>
+              <div><strong>Est. Insoro (VAT/Duties):</strong> <span id="out-duty" class="text-emerald-400 font-bold"></span> RWF</div>
+              <div><strong>Umupaka:</strong> <span id="out-border" class="text-white"></span></div>
+            </div>
+            <button onclick="submitCustoms()" class="w-full mt-2 bg-brand-yellow hover:bg-amber-400 text-slate-900 text-xs font-extrabold py-2.5 rounded-lg transition">
+              Ohereza Inyandiko ku Mupaka
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Freight Tracking Section -->
+  <section id="kurikirana" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-brand-slate rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden shadow-2xl">
+      <div class="max-w-3xl space-y-4 relative z-10">
+        <span class="text-brand-yellow text-xs font-bold uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full">Gukurikirana Imizigo</span>
+        <h2 class="text-3xl font-extrabold">Shyiramo Numero y'Umzigo Wawu (Tracking Code)</h2>
+        <p class="text-slate-300 text-sm">Gukurikirana aho imodoka igeze mu muhanda wa Kigali, Musanze, Rubavu, cyangwa Rusizi.</p>
+
+        <form id="track-form" class="flex flex-col sm:flex-row gap-3 pt-2">
+          <input type="text" id="track-input" placeholder="e.g. RWA-9921-TRK" required class="flex-1 px-5 py-3.5 rounded-xl bg-slate-800 border border-slate-700 text-white font-mono text-sm">
+          <button type="submit" class="bg-brand hover:bg-brand-dark px-8 py-3.5 rounded-xl font-bold transition flex items-center justify-center space-x-2">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Gukurikirana</span>
+          </button>
+        </form>
+
+        <div id="track-result" class="hidden mt-6 bg-slate-800/90 border border-slate-700 p-6 rounded-2xl space-y-3">
+          <div class="flex justify-between items-center border-b border-slate-700 pb-2">
+            <span class="text-xs font-bold text-brand-yellow">STATUS: IN TRANSIT</span>
+            <span class="text-xs text-slate-400">Updated just now</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+            <div>
+              <span class="block text-slate-400">ID y'Umzigo:</span>
+              <span class="font-bold text-white" id="track-id-val">RWA-9921-TRK</span>
+            </div>
+            <div>
+              <span class="block text-slate-400">Aho Ugeze:</span>
+              <span class="font-bold text-brand-blue">Musanze Highway</span>
+            </div>
+            <div>
+              <span class="block text-slate-400">Isaha yo Kugera:</span>
+              <span class="font-bold text-emerald-400">Today at 16:30 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-slate text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center space-x-3">
+          <div class="bg-brand text-white p-2.5 rounded-xl">
+            <i class="fa-solid fa-truck-fast text-lg"></i>
+          </div>
+          <span class="text-lg font-extrabold text-white">Rwanda Logistics Hub</span>
+        </div>
+        <p class="text-xs text-center text-slate-400">
+          &copy; 2026 Rwanda Logistics Hub. Urubuga Ruhuza Ubwikorezi mu Rwanda. Ibirenganzira byose birasigasirwa.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts Logic -->
+  <script>
+    // State Tracking
+    let registeredTrucksCount = 3;
+    let registeredCargosCount = 2;
+    let activeRole = 'carrier';
+
+    // Mobile Navigation
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Toast Notifications
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      const bgColor = type === 'success' ? 'bg-brand' : 'bg-brand-slate';
+      
+      toast.className = `${bgColor} text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center space-x-3 transition-all duration-300 pointer-events-auto text-xs sm:text-sm font-semibold border border-white/10`;
+      toast.innerHTML = `
+        <i class="fa-solid ${type === 'success' ? 'fa-circle-check text-brand-yellow' : 'fa-circle-info'} text-lg"></i>
+        <span>${message}</span>
+      `;
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+
+    // Modal Control Functions
+    function openRegisterModal(role = 'carrier') {
+      document.getElementById('register-modal').classList.remove('hidden');
+      switchRegisterRole(role);
+    }
+
+    function closeRegisterModal() {
+      document.getElementById('register-modal').classList.add('hidden');
+    }
+
+    // Driver Modal Details
+    function showCarrierDetails(name, phone, vehicle, plate, location, photo) {
+      document.getElementById('modal-driver-name').textContent = name;
+      document.getElementById('modal-truck-phone').textContent = phone;
+      document.getElementById('modal-truck-type').textContent = vehicle;
+      document.getElementById('modal-truck-plate').textContent = plate;
+      document.getElementById('modal-truck-location').textContent = location;
+      document.getElementById('modal-truck-img').src = photo || 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80';
+      document.getElementById('modal-call-btn').href = `tel:${phone.replace(/\s+/g, '')}`;
+      document.getElementById('contact-modal').classList.remove('hidden');
+    }
+
+    function closeContactModal() {
+      document.getElementById('contact-modal').classList.add('hidden');
+    }
+
+    // Cargo Shipper Modal Details
+    function showCargoDetails(cargoTitle, shipperName, phone, tin, weight, route, photo) {
+      document.getElementById('modal-cargo-title').textContent = cargoTitle;
+      document.getElementById('modal-shipper-name').textContent = shipperName;
+      document.getElementById('modal-cargo-phone').textContent = phone;
+      document.getElementById('modal-cargo-tin').textContent = tin || 'N/A';
+      document.getElementById('modal-cargo-weight').textContent = weight;
+      document.getElementById('modal-cargo-route').textContent = route;
+      document.getElementById('modal-cargo-img').src = photo || 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80';
+      document.getElementById('modal-cargo-call-btn').href = `tel:${phone.replace(/\s+/g, '')}`;
+      document.getElementById('cargo-contact-modal').classList.remove('hidden');
+    }
+
+    function closeCargoContactModal() {
+      document.getElementById('cargo-contact-modal').classList.add('hidden');
+    }
+
+    function switchRegisterRole(role) {
+      activeRole = role;
+      const carrierBtn = document.getElementById('role-carrier-btn');
+      const shipperBtn = document.getElementById('role-shipper-btn');
+      const carrierForm = document.getElementById('carrier-reg-form');
+      const shipperForm = document.getElementById('shipper-reg-form');
+
+      if (role === 'carrier') {
+        carrierBtn.className = "py-3 px-4 rounded-xl font-extrabold text-xs transition shadow-sm bg-brand text-white flex items-center justify-center space-x-2";
+        shipperBtn.className = "py-3 px-4 rounded-xl font-extrabold text-xs transition text-slate-600 hover:text-slate-900 flex items-center justify-center space-x-2";
+        carrierForm.classList.remove('hidden');
+        shipperForm.classList.add('hidden');
+      } else {
+        shipperBtn.className = "py-3 px-4 rounded-xl font-extrabold text-xs transition shadow-sm bg-brand-slate text-white flex items-center justify-center space-x-2";
+        carrierBtn.className = "py-3 px-4 rounded-xl font-extrabold text-xs transition text-slate-600 hover:text-slate-900 flex items-center justify-center space-x-2";
+        shipperForm.classList.remove('hidden');
+        carrierForm.classList.add('hidden');
+      }
+    }
+
+    // Carrier Registration Handler
+    function handleCarrierRegister(e) {
+      e.preventDefault();
+      const name = document.getElementById('c-name').value;
+      const phone = document.getElementById('c-phone').value;
+      const vtype = document.getElementById('c-vtype').value;
+      const plate = document.getElementById('c-plate').value;
+      const cap = document.getElementById('c-capacity').value;
+      const location = document.getElementById('c-location').value;
+      let photo = document.getElementById('c-photo').value.trim();
+
+      if (!photo) {
+        photo = 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=600&q=80';
+      }
+
+      // Dynamically add to live Marketplace Grid
+      const trucksGrid = document.getElementById('trucks-grid');
+      const newCard = document.createElement('div');
+      newCard.className = "bg-brand-bg rounded-2xl overflow-hidden border-2 border-brand hover:border-brand-dark transition shadow-sm flex flex-col justify-between animate-fade-in";
+      newCard.innerHTML = `
+        <div>
+          <div class="h-44 bg-slate-200 relative overflow-hidden">
+            <img src="${photo}" alt="${vtype}" class="w-full h-full object-cover">
+            <span class="absolute top-3 left-3 bg-brand text-white text-[10px] uppercase font-extrabold px-2.5 py-1 rounded-full shadow">New Carrier</span>
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-3">
+              <div>
+                <h4 class="font-extrabold text-slate-900 text-base">${vtype}</h4>
+                <p class="text-xs text-slate-500"><i class="fa-solid fa-user text-slate-400 mr-1"></i> ${name}</p>
+              </div>
+              <span class="font-mono text-xs font-bold bg-white px-2.5 py-1 rounded-lg border border-slate-200 uppercase">${plate}</span>
+            </div>
+            <div class="space-y-1.5 text-xs text-slate-600 bg-white p-3 rounded-xl border border-slate-150">
+              <div class="flex justify-between">
+                <span>Uburemere Icapa:</span>
+                <span class="font-bold text-slate-900">${cap} Tons</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Aho Iherereye:</span>
+                <span class="font-bold text-brand-blue">${location}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 pt-0">
+          <button onclick="showCarrierDetails('${name}', '${phone}', '${vtype}', '${plate}', '${location}', '${photo}')" class="w-full bg-brand hover:bg-brand-dark text-white font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center space-x-1.5">
+            <i class="fa-solid fa-phone"></i>
+            <span>Vugana n'Umutware</span>
+          </button>
+        </div>
+      `;
+      trucksGrid.prepend(newCard);
+
+      // Update counters
+      registeredTrucksCount++;
+      document.getElementById('truck-count-badge').textContent = registeredTrucksCount;
+      document.getElementById('stat-trucks').textContent = (542 + registeredTrucksCount - 3).toString();
+
+      closeRegisterModal();
+      switchMarketplaceTab('trucks');
+      showToast(`Murakoze ${name}! Imodoka yawe (${plate}) yanditswe neza ku isoko.`);
+      document.getElementById('carrier-reg-form').reset();
+    }
+
+    // Shipper Registration Handler
+    function handleShipperRegister(e) {
+      e.preventDefault();
+      const name = document.getElementById('s-name').value;
+      const phone = document.getElementById('s-phone').value;
+      const tin = document.getElementById('s-tin').value;
+      const cargo = document.getElementById('s-cargo').value;
+      const weight = document.getElementById('s-weight').value;
+      const from = document.getElementById('s-from').value;
+      const to = document.getElementById('s-to').value;
+      let photo = document.getElementById('s-photo').value.trim();
+
+      if (!photo) {
+        photo = 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80';
+      }
+
+      // Dynamically add to Cargos Grid
+      const cargosGrid = document.getElementById('cargos-grid');
+      const newCard = document.createElement('div');
+      newCard.className = "bg-brand-bg rounded-2xl overflow-hidden border-2 border-brand-slate transition shadow-sm flex flex-col justify-between animate-fade-in";
+      const weightInTons = (weight / 1000).toFixed(1) + " Tons";
+      const routeStr = `${from} ➔ ${to}`;
+
+      newCard.innerHTML = `
+        <div>
+          <div class="h-44 bg-slate-200 relative overflow-hidden">
+            <img src="${photo}" alt="${cargo}" class="w-full h-full object-cover">
+            <span class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] uppercase font-extrabold px-2.5 py-1 rounded-full shadow">Umzigo Mushya</span>
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-3">
+              <div>
+                <h4 class="font-extrabold text-slate-900 text-base">${cargo}</h4>
+                <p class="text-xs text-slate-500"><i class="fa-solid fa-building text-slate-400 mr-1"></i> ${name}</p>
+              </div>
+              <span class="text-xs font-bold text-brand bg-white px-2.5 py-1 rounded-lg border border-slate-200">${weightInTons}</span>
+            </div>
+            <div class="space-y-1.5 text-xs text-slate-600 bg-white p-3 rounded-xl border border-slate-150">
+              <div class="flex justify-between">
+                <span>Inzira:</span>
+                <span class="font-bold text-slate-900">${routeStr}</span>
+              </div>
+              <div class="flex justify-between">
+                <span>TIN y'Ubucuruzi:</span>
+                <span class="font-mono font-bold text-slate-700">${tin || 'N/A'}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 pt-0">
+          <button onclick="showCargoDetails('${cargo}', '${name}', '${phone}', '${tin}', '${weightInTons}', '${routeStr}', '${photo}')" class="w-full bg-brand-slate hover:bg-slate-800 text-white font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center space-x-1.5">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+            <span>Tanga Igiciro cyawe (Bid)</span>
+          </button>
+        </div>
+      `;
+      cargosGrid.prepend(newCard);
+
+      registeredCargosCount++;
+      document.getElementById('cargo-count-badge').textContent = registeredCargosCount;
+      document.getElementById('stat-cargos').textContent = (189 + registeredCargosCount - 2).toString();
+
+      closeRegisterModal();
+      switchMarketplaceTab('cargos');
+      showToast(`Umzigo wa ${name} wamanitswe neza ku isoko!`);
+      document.getElementById('shipper-reg-form').reset();
+    }
+
+    // Delivery Request Handler
+    function handleDeliveryRequest(e) {
+      e.preventDefault();
+      const name = document.getElementById('d-name').value.trim();
+      const phone = document.getElementById('d-phone').value.trim();
+      const cargo = document.getElementById('d-cargo').value.trim();
+      const weight = document.getElementById('d-weight').value;
+      const from = document.getElementById('d-from').value.trim();
+      const to = document.getElementById('d-to').value.trim();
+
+      const deliveryGrid = document.getElementById('delivery-grid');
+      const card = document.createElement('div');
+      card.className = "bg-brand-bg rounded-2xl border-2 border-brand transition shadow-sm p-5 animate-fade-in";
+      card.innerHTML = `
+        <div class="flex justify-between items-start gap-3 mb-4">
+          <div>
+            <span class="inline-block bg-brand text-white text-[10px] uppercase font-extrabold px-2.5 py-1 rounded-full">Request Nshya</span>
+            <h4 class="font-extrabold text-slate-900 text-base mt-2">${cargo}</h4>
+            <p class="text-xs text-slate-500"><i class="fa-solid fa-user mr-1"></i>${name}</p>
+          </div>
+          <span class="text-xs font-bold text-brand bg-white px-2.5 py-1 rounded-lg border border-slate-200">${Number(weight).toLocaleString()} kg</span>
+        </div>
+        <div class="space-y-1.5 text-xs text-slate-600 bg-white p-3 rounded-xl border border-slate-200">
+          <div class="flex justify-between gap-3"><span>Inzira:</span><span class="font-bold text-slate-900">${from} ➔ ${to}</span></div>
+          <div class="flex justify-between gap-3"><span>Telefone:</span><span class="font-bold text-slate-900">${phone}</span></div>
+        </div>
+        <a href="tel:${phone.replace(/\s+/g, '')}" class="mt-4 w-full bg-brand hover:bg-brand-dark text-white font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-phone"></i><span>Vugana n'Usabye Transport</span>
+        </a>
+      `;
+      deliveryGrid.appendChild(card);
+      document.getElementById('delivery-count-badge').textContent = Number(document.getElementById('delivery-count-badge').textContent) + 1;
+      document.getElementById('delivery-request-form').reset();
+      showToast(`Request ya ${name} yo gutwarirwa ${cargo} yashyizweho neza.`);
+    }
+
+    // Switch Marketplace Tab
+    function switchMarketplaceTab(tab) {
+      const trucksGrid = document.getElementById('trucks-grid');
+      const cargosGrid = document.getElementById('cargos-grid');
+      const deliveryGrid = document.getElementById('delivery-grid');
+      const trucksBtn = document.getElementById('tab-trucks-btn');
+      const cargosBtn = document.getElementById('tab-cargos-btn');
+      const deliveryBtn = document.getElementById('tab-delivery-btn');
+      const inactive = "px-4 py-2 rounded-lg text-xs font-extrabold transition text-slate-600 hover:text-slate-900";
+
+      trucksGrid.classList.add('hidden');
+      cargosGrid.classList.add('hidden');
+      deliveryGrid.classList.add('hidden');
+      trucksBtn.className = inactive;
+      cargosBtn.className = inactive;
+      deliveryBtn.className = inactive;
+
+      if (tab === 'trucks') {
+        trucksGrid.classList.remove('hidden');
+        trucksBtn.className = "px-4 py-2 rounded-lg text-xs font-extrabold transition bg-white text-brand shadow-sm";
+      } else if (tab === 'cargos') {
+        cargosGrid.classList.remove('hidden');
+        cargosBtn.className = "px-4 py-2 rounded-lg text-xs font-extrabold transition bg-white text-brand-slate shadow-sm";
+      } else {
+        deliveryGrid.classList.remove('hidden');
+        deliveryBtn.className = "px-4 py-2 rounded-lg text-xs font-extrabold transition bg-white text-brand shadow-sm";
+      }
+    }
+
+    // Freight Search Calculation
+    document.getElementById('quote-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const origin = document.getElementById('origin').value;
+      const destination = document.getElementById('destination').value;
+      const weight = parseFloat(document.getElementById('weight').value) || 500;
+
+      document.getElementById('results-container').classList.add('hidden');
+      document.getElementById('results-loader').classList.remove('hidden');
+
+      setTimeout(() => {
+        const baseRate = Math.round(weight * 110 + 45000);
+        document.getElementById('price-1').textContent = `${baseRate.toLocaleString()} RWF`;
+        document.getElementById('price-2').textContent = `${Math.round(baseRate * 1.15).toLocaleString()} RWF`;
+
+        document.getElementById('results-loader').classList.add('hidden');
+        document.getElementById('results-container').classList.remove('hidden');
+        showToast(`Ibiciro bishya bya ${origin} ➔ ${destination} byabonetse neza!`);
+      }, 500);
+    });
+
+    function selectCarrier(carrier, price) {
+      showToast(`Wamaze hitamo ${carrier} ku giciro cy' ${price}.`);
+    }
+
+    // Customs Declarations
+    document.getElementById('customs-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const tin = document.getElementById('tin').value;
+      const company = document.getElementById('company').value;
+      const commodity = document.getElementById('commodity').value;
+      const val = parseFloat(document.getElementById('cargo-val').value) || 0;
+      const border = document.getElementById('border').value;
+
+      document.getElementById('out-tin').textContent = tin;
+      document.getElementById('out-company').textContent = company;
+      document.getElementById('out-commodity').textContent = commodity;
+      document.getElementById('out-val').textContent = val.toLocaleString();
+      document.getElementById('out-duty').textContent = Math.round(val * 0.18).toLocaleString();
+      document.getElementById('out-border').textContent = border;
+
+      document.getElementById('customs-output').classList.remove('hidden');
+      showToast('Declarasiyo y\'incamake yakozwe neza!');
+    });
+
+    function submitCustoms() {
+      showToast('Declarasiyo yohererejwe ku Mupaka na RRA neza!');
+      document.getElementById('customs-output').classList.add('hidden');
+      document.getElementById('customs-form').reset();
+    }
+
+    // Tracking Form
+    document.getElementById('track-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const trackId = document.getElementById('track-input').value;
+      document.getElementById('track-id-val').textContent = trackId.toUpperCase();
+      document.getElementById('track-result').classList.remove('hidden');
+      showToast(`Amakuru y'umzigo ${trackId} yabonywe neza.`);
+    });
+  
+    // Theme switch
+    function applyTheme(theme) {
+      const isDark = theme === 'dark';
+      document.body.classList.toggle('dark-mode', isDark);
+
+      const desktopIcon = document.getElementById('theme-toggle-icon');
+      const mobileIcon = document.getElementById('theme-toggle-icon-mobile');
+      if (desktopIcon) desktopIcon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+      if (mobileIcon) mobileIcon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+
+      const buttonLabel = isDark ? 'Hindura Bright Mode' : 'Hindura Dark Mode';
+      document.getElementById('theme-toggle')?.setAttribute('aria-label', buttonLabel);
+      document.getElementById('theme-toggle-mobile')?.setAttribute('aria-label', buttonLabel);
+    }
+
+    function toggleTheme() {
+      const nextTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+      localStorage.setItem('rlh-theme', nextTheme);
+      applyTheme(nextTheme);
+    }
+
+    applyTheme(localStorage.getItem('rlh-theme') || 'light');
+</script>
+</body>
+</html>

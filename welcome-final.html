@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rwanda Logistics Hub | Murakaza neza</title>
+<link rel="icon" type="image/svg+xml" href="rwanda-logistics-hub-favicon.svg">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script>
+tailwind.config={theme:{extend:{colors:{
+brand:{DEFAULT:'#00A859',dark:'#008546',light:'#E6F6EE',yellow:'#FAD02C',blue:'#00A3E0',slate:'#0F172A'}
+},fontFamily:{sans:['Inter','sans-serif']}}}};
+</script>
+<style>
+html{scroll-behavior:smooth}body{font-family:Inter,sans-serif;background:#f8fafc}
+.hero{background:linear-gradient(120deg,rgba(15,23,42,.92),rgba(0,88,58,.78)),url('https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=1920&q=85');background-size:cover;background-position:center;min-height:100vh}
+.glass{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(14px)}
+.goal-card{transition:.25s ease}.goal-card:hover{transform:translateY(-5px)}
+body.light-mode .hero{background:linear-gradient(120deg,rgba(255,255,255,.93),rgba(230,246,238,.88)),url('https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=1920&q=85');color:#0f172a}
+body.light-mode .text-white{color:#0f172a!important}
+body.light-mode .text-slate-200{color:#475569!important}
+body.light-mode .text-slate-300{color:#64748b!important}
+body.light-mode .text-slate-400{color:#64748b!important}
+body.light-mode .glass{background:rgba(255,255,255,.72);border-color:rgba(15,23,42,.12);box-shadow:0 20px 60px rgba(15,23,42,.12)}
+body.light-mode .bg-white\/10{background:rgba(15,23,42,.06)!important}
+body.light-mode .border-white\/10{border-color:rgba(15,23,42,.12)!important}
+body.light-mode .border-white\/18{border-color:rgba(15,23,42,.12)!important}
+.theme-toggle{width:48px;height:28px;border-radius:999px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);display:flex;align-items:center;padding:3px;cursor:pointer;transition:.2s}
+.theme-toggle span{width:20px;height:20px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;color:#0f172a;font-size:11px;transition:.2s}
+body.light-mode .theme-toggle{background:#e2e8f0;border-color:#cbd5e1}
+body.light-mode .theme-toggle span{transform:translateX(20px)}
+</style>
+</head>
+<body class="text-slate-800">
+<main class="hero text-white flex flex-col">
+<header class="border-b border-white/10">
+<div class="max-w-7xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-white p-1 rounded-xl shadow-lg"><img src="rwanda-logistics-hub-icon.png" alt="Rwanda Logistics Hub" class="w-14 h-14 object-contain rounded-lg"></div>
+<div><div class="text-xl sm:text-2xl font-extrabold">Rwanda Logistics<span class="text-brand">Hub</span></div>
+<div class="text-[10px] sm:text-xs text-slate-300 font-bold tracking-widest uppercase">Ubwikorezi mu Rwanda</div></div>
+</div>
+<div class="flex items-center gap-3 text-xs font-semibold text-slate-200">
+<button id="themeToggle" class="theme-toggle" type="button" aria-label="Change theme" title="Bright / Dark mode"><span><i id="themeIcon" class="fa-solid fa-moon"></i></span></button>
+<div class="hidden sm:flex items-center gap-2">
+<i class="fa-solid fa-flag text-brand-yellow"></i> Rwanda • EAC
+</div>
+</div>
+</div>
+</header>
+
+<section class="flex-1 flex items-center py-12 sm:py-16">
+<div class="max-w-7xl mx-auto w-full px-5 sm:px-8">
+<div class="grid lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-7">
+<span class="inline-flex items-center gap-2 bg-brand/20 border border-brand/40 text-brand-yellow px-4 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider">
+<i class="fa-solid fa-circle-check"></i> Murakaza neza
+</span>
+<h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">Rwanda Logistics Hub</h1>
+<p class="mt-5 max-w-2xl text-base sm:text-lg text-slate-200 leading-relaxed">
+Urubuga ruhuza abafite imizigo n’abatwara imizigo, rugafasha kubona ibiciro,
+guhitamo transport ikwiye no gukurikirana imizigo mu buryo bworoshye kandi buboneye.
+</p>
+<div class="mt-8">
+<a href="main-final.html" class="inline-flex items-center justify-center gap-3 bg-brand hover:bg-brand-dark text-white font-extrabold px-9 py-4 rounded-2xl shadow-2xl transition transform hover:-translate-y-1">
+<i class="fa-solid fa-right-to-bracket"></i><span>INJIRA</span><i class="fa-solid fa-arrow-right text-sm"></i>
+</a>
+</div>
+<p class="mt-4 text-xs text-slate-400">Kanda kuri <strong class="text-white">INJIRA</strong> ujye kuri Main Page.</p>
+</div>
+
+<div class="lg:col-span-5 glass rounded-3xl p-6 sm:p-8 shadow-2xl">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-11 h-11 rounded-xl bg-brand-yellow text-slate-900 flex items-center justify-center"><i class="fa-solid fa-bullseye"></i></div>
+<div><p class="text-xs text-brand-yellow font-extrabold uppercase tracking-widest">Intego za Website</p>
+<h2 class="text-xl font-extrabold">Ibyo Rwanda Logistics Hub igamije</h2></div>
+</div>
+<div class="space-y-4">
+<div class="goal-card bg-white/10 rounded-2xl p-4 flex gap-4"><i class="fa-solid fa-link text-brand mt-1"></i><div><h3 class="font-bold">Guhuza abafite imizigo n'abatwara</h3><p class="text-xs text-slate-300 mt-1">Gufasha impande zombi kubona uwo gukorana na we.</p></div></div>
+<div class="goal-card bg-white/10 rounded-2xl p-4 flex gap-4"><i class="fa-solid fa-money-bill-transfer text-brand-yellow mt-1"></i><div><h3 class="font-bold">Kugereranya ibiciro</h3><p class="text-xs text-slate-300 mt-1">Gufasha user kubona no kugereranya ibiciro by'amakampani atandukanye.</p></div></div>
+<div class="goal-card bg-white/10 rounded-2xl p-4 flex gap-4"><i class="fa-solid fa-location-dot text-brand-blue mt-1"></i><div><h3 class="font-bold">Gukurikirana imizigo</h3><p class="text-xs text-slate-300 mt-1">Gufasha gukurikirana aho cargo igeze.</p></div></div>
+<div class="goal-card bg-white/10 rounded-2xl p-4 flex gap-4"><i class="fa-solid fa-shield-halved text-brand mt-1"></i><div><h3 class="font-bold">Ubwikorezi buboneye</h3><p class="text-xs text-slate-300 mt-1">Gufasha abakoresha kubona serivisi z'ubwikorezi mu buryo buboneye kandi bworoshye.</p></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="border-t border-white/10 bg-slate-950/35">
+<div class="max-w-7xl mx-auto px-5 sm:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+<div><p class="text-xs text-slate-400 uppercase tracking-widest font-bold">Contact</p>
+<a href="mailto:info@rwandalogisticshub.com" class="mt-1 inline-flex items-center gap-2 text-sm font-bold hover:text-brand-yellow transition">
+<i class="fa-solid fa-envelope text-brand-yellow"></i> info@rwandalogisticshub.com
+</a></div>
+<div class="text-center md:text-right text-xs text-slate-400"><p>Rwanda Logistics Hub</p><p class="mt-1">© 2026 — Ubwikorezi bworoshye, bwihuse kandi buboneye.</p></div>
+</div>
+</section>
+</main>
+
+<script>
+(function(){
+ const body=document.body,btn=document.getElementById('themeToggle'),icon=document.getElementById('themeIcon');
+ const saved=localStorage.getItem('rlh-theme');
+ if(saved==='light') body.classList.add('light-mode');
+ function update(){
+   const light=body.classList.contains('light-mode');
+   icon.className=light?'fa-solid fa-sun':'fa-solid fa-moon';
+   btn.setAttribute('aria-label',light?'Switch to dark mode':'Switch to bright mode');
+ }
+ update();
+ btn.addEventListener('click',function(){
+   body.classList.toggle('light-mode');
+   localStorage.setItem('rlh-theme',body.classList.contains('light-mode')?'light':'dark');
+   update();
+ });
+})();
+</script>
+</body>
+</html>
